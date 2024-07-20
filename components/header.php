@@ -1,137 +1,163 @@
+
+
 <body>
-    <!-- Page Preloder -->
-    <!-- <div id="preloder">
-        <div class="loader"></div>
-    </div> -->
-    <?php
-    if(isset($_SESSION['user'])) {
-        $user_id = $_SESSION['user']['id'];
-        $count_carts = count($CartModel->count_cart($user_id));
-
-    }
-   
-    ?>
-
-    <!-- Offcanvas Menu Begin -->
-    <div class="offcanvas-menu-overlay"></div>
-    <div class="offcanvas-menu-wrapper">
-        <div class="offcanvas__close">+</div>
-        <ul class="offcanvas__widget">
-            <li><span class="icon_search search-switch"></span></li>
-            <li><a href="#"><span class="icon_heart_alt"></span>
-                <div class="tip">2</div>
-            </a></li>
-            <li><a href="#"><span class="icon_bag_alt"></span>
-                <div class="tip">2</div>
-            </a></li>
-        </ul>
-        <div class="offcanvas__logo">
-            <a href="index.php"><img src="public/img/logo.png" alt=""></a>
-        </div>
-        <div id="mobile-menu-wrap"></div>
-        
-        <?php if(isset($_SESSION['user'])) { ?>
-        <div class="offcanvas__auth acount">
-            <a href="index.php?url=thong-tin-tai-khoan">
-                <img src="upload/<?=$_SESSION['user']['image']?>" alt=""><?=$_SESSION['user']['username']?>
-            </a>
-        </div>
-        <?php 
-            } else {
-        ?>
-            <div class="offcanvas__auth">
-                <a href="index.php?url=dang-nhap">Đăng nhập</a>
-                <a href="index.php?url=dang-ky">Đăng ký</a>
-            </div>
-        <?php 
-            } 
-        ?>
-        
-    </div>
-    <!-- Offcanvas Menu End -->
-
-    <!-- Header Section Begin -->
-    <header class="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-3 col-lg-2">
-                    <div class="header__logo">
-                        <a href="index.php"><img style="max-height: 100px; width: 300px;" src="public/img/logo11.png" alt=""></a>
-                    </div>
-                </div>
-                <div class="col-xl-6 col-lg-7">
-                    <nav class="header__menu">
-                        <ul>
-                            <li ><a href="index.php">TRANG CHỦ</a></li>
-                            
-                            <li><a href="index.php?url=cua-hang">Cửa hàng</a></li>
-                            
-                            <li><a href="index.php?url=bai-viet">Bài viết</a></li>
-                            <!-- <li><a href="./blog.html">bÀI viẾT</a></li> -->
-                            <li><a href="index.php?url=lien-he">LIÊN HỆ</a></li>
-
-                            <li><a href="#">Trang</a>
-                                <ul class="dropdown">
-                                    
-                                    <li><a href="index.php?url=gio-hang">Giỏ hàng</a></li>
-                                    <li><a href="index.php?url=thanh-toan">Thanh toán</a></li>
-                                    <li><a href="index.php?url=don-hang">Đơn mua</a></li>
-                                </ul>
-                            </li>
-                            
-                            
-
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-lg-3">
-                    <div class="header__right">
-                        
-
-                        <?php if(isset($_SESSION['user'])) { ?>
-                            <div class="header__right__auth acount">
-                                <a href="index.php?url=thong-tin-tai-khoan">
-                                    <img src="upload/<?=$_SESSION['user']['image']?>" alt=""><?=$_SESSION['user']['username']?>
-                                </a>
-                                
-                            </div>
-                        <?php 
-                        } else {
-                        ?>
-                            <div class="header__right__auth">
-                                <a href="index.php?url=dang-nhap">Đăng nhập</a>
-                                <a href="index.php?url=dang-ky">Đăng ký</a>
-                            </div>
-                        <?php 
-                        } 
-                        ?>
-
-                        <?php if(isset($_SESSION['user'])) {?>
-                        <ul class="header__right__widget">
-                            <li><span class="icon_search search-switch"></span></li>
-                            
-                            <li><a id="cart-mini" href="#"><span class="icon_bag_alt"></span>
-                                <div class="tip"><?=$count_carts?></div>
-                            </a></li>
-                        </ul>
-                        <?php }else {?>
-                            
-                        <ul class="header__right__widget">
-                            <li><span class="icon_search search-switch"></span></li>
-                            
-                            <li><a onclick="alert('Vui lòng đăng nhập để sử dụng chức năng')" id="cart-mini" href="dang-nhap"><span class="icon_bag_alt"></span>
-                                <div class="tip">0</div>
-                            </a></li>
-                        </ul>
-                        <?php }?>
-                    </div>
-                </div>
-            </div>
-            <div class="canvas__open">
-                <i class="fa fa-bars"></i>
-            </div>
-        </div>
-    </header>
-    <!-- Header Section End -->
 
     
+    <div class="container-xxl position-relative bg-white d-flex p-0">
+        <!-- Spinner Start -->
+        <!-- <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div> -->
+        <!-- Spinner End -->
+
+
+        <!-- Sidebar Start -->
+        <div class="sidebar pe-4 pb-3">
+            <nav class="navbar bg-light navbar-light">
+                <a href="index.php" class="navbar-brand mx-4 mb-3">
+                    <h3 class="text-primary"><i class="fa fa fa-user me-2"></i>ADMIN</h3>
+                </a>
+                <!-- <div class="d-flex align-items-center ms-4 mb-4">
+                    <div class="position-relative">
+                        <img class="rounded-circle" src="public_admin/img/user-default.png" alt="" style="width: 40px; height: 40px;">
+                        <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
+                    </div>
+                    <div class="ms-3">
+                        <h6 class="mb-0">Khoa Nguyen</h6>
+                        <span>Admin</span>
+                    </div>
+                </div> -->
+                <div class="navbar-nav w-100">
+                    <a href="index.php" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-shopping-basket me-2"></i>Đơn hàng</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            
+                            <a href="index.php?quanli=danh-sach-don-hang" class="dropdown-item">Tất cả đơn</a>
+                            <a href="danh-sach-don-cho" class="dropdown-item">Đơn chờ xác nhận</a>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle " data-bs-toggle="dropdown"><i class="fa fa-th me-2"></i>Danh mục</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="index.php?quanli=them-danh-muc" class="dropdown-item">Thêm mới</a>
+                            <a href="index.php?quanli=danh-sach-danh-muc" class="dropdown-item">Tất cả</a>
+                            
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fas fa-box me-2"></i>Sản phẩm</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="index.php?quanli=them-san-pham" class="dropdown-item">Thêm mới</a>
+                            <a href="index.php?quanli=danh-sach-san-pham" class="dropdown-item">Tất cả</a>
+                            
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fas fa-book me-2"></i> Bài viết</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="index.php?quanli=danh-sach-bai-viet" class="dropdown-item">Tất cả</a>
+                            <a href="index.php?quanli=them-bai-viet" class="dropdown-item">Thêm bài viết</a>
+                            <a href="index.php?quanli=danh-muc-bai-viet" class="dropdown-item">Chuyên mục</a>
+                            
+                        </div>
+                    </div>
+
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fas fa-chart-bar me-2"></i> Thống kê</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="thong-ke-san-pham" class="dropdown-item">Sản phẩm - danh mục</a>
+                            <a href="thong-ke-don-hang" class="dropdown-item">Đơn hàng</a>
+                            
+                        </div>
+                    </div>
+                    
+                    <a href="index.php?quanli=danh-sach-khach-hang" class="nav-item nav-link"><i class="fas fa-users me-2"></i>Thành viên</a>
+                    <a href="index.php?quanli=binh-luan" class="nav-item nav-link"><i class="fas fa-comment me-2"></i>Bình luận</a>
+
+                    
+                    
+                    
+                    <!-- <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Pages</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="signin.html" class="dropdown-item">Sign In</a>
+                            <a href="signup.html" class="dropdown-item">Sign Up</a>
+                            <a href="404.html" class="dropdown-item">404 Error</a>
+                            <a href="blank.html" class="dropdown-item">Blank Page</a>
+                        </div>
+                    </div> -->
+                </div>
+            </nav>
+        </div>
+        <!-- Sidebar End -->
+
+
+        <!-- Content Start -->
+        <div class="content">
+            <!-- Navbar Start -->
+            <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
+                <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
+                    <h2 class="text-primary mb-0"><i class="fa fa-hashtag"></i></h2>
+                </a>
+                <a href="#" class="sidebar-toggler flex-shrink-0">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <form class="d-none d-md-flex ms-4">
+                    <input class="form-control border-0" type="search" placeholder="Tìm kiếm">
+                </form>
+                <div class="navbar-nav align-items-center ms-auto">
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="fa fa-envelope me-lg-2"></i>
+                            <span class="d-none d-lg-inline-flex">Tin nhắn</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-white border-1 rounded-0 rounded-bottom m-0">
+                            <a href="#" class="dropdown-item">
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle" src="public_admin/img/user-default.png" alt="" style="width: 40px; height: 40px;">
+                                    <div class="ms-2">
+                                        <h6 class="fw-normal mb-0">hello everyone</h6>
+                                        <small>15 phút trước</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <hr class="dropdown-divider">
+                            
+                            <a href="#" class="dropdown-item text-center">Xem tất cả</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="fa fa-bell me-lg-2"></i>
+                            <span class="d-none d-lg-inline-flex">Thông báo</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-white border-1 rounded-0 rounded-bottom m-0">
+                            <a href="#" class="dropdown-item">
+                                <h6 class="fw-normal mb-0">1 Đơn hàng mới</h6>
+                                <small>10:20 20-11-2023</small>
+                            </a>
+                            <hr class="dropdown-divider">
+                            
+                            <a href="#" class="dropdown-item text-center">Xem tất cả</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <img class="rounded-circle me-lg-2" src="public_admin/img/user-default.png" alt="" style="width: 40px; height: 40px;">
+                            <span class="d-none d-lg-inline-flex">Đỗ Mạnh</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-white border-1 rounded-0 rounded-bottom m-0">
+                            <a href="#" class="dropdown-item">Hồ sơ</a>
+                            <a href="index.php?quanli=dang-xuat" class="dropdown-item">Đăng xuất</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- Navbar End -->
+
+            <!-- Content start -->

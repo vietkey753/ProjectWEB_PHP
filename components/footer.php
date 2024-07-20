@@ -1,129 +1,133 @@
-<!-- Instagram End -->
-<div style="border: 1px solid #0A68FF;"></div>
-<!-- Footer Section Begin -->
-<footer class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-7">
-                <div class="footer__about">
-                    <div class="footer__logo">
-                        <a href="./index.html"><img src="public/img/logo11.png" alt=""></a>
-                    </div>
-                    <p>Chào mừng bạn đến với MarianStore nơi cung cấp những linh kiện, laptop chất lượng</p>
-                    
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-3 col-sm-5">
-                <div class="footer__widget">
-                    <h6>ĐƯỜNG DẪN</h6>
-                    <ul>
-                        <li><a href="#">Về chúng tôi</a></li>
-                        <li><a href="#">Blogs</a></li>
-                        <li><a href="#">Liên hệ</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-3 col-sm-4">
-                <div class="footer__widget">
-                    <h6>tÀI khoẢN</h6>
-                    <ul>
-                        <li><a href="#">Tài khoản của tôi</a></li>
-                        <li><a href="#">Theo dõi đơn hàng</a></li>
-                        <li><a href="#">Thủ tục thanh toán</a></li>
-                        <li><a href="#">Danh sách yêu thích</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-8 col-sm-8">
-                <div class="footer__newslatter">
-                    <h6>BẢN TIN</h6>
-                    <form action="#">
-                        <input type="text" placeholder="Email">
-                        <button type="submit" class="site-btn">Theo dõi</button>
-                    </form>
-                    <div class="footer__payment">
-                        <a href="#"><img src="public/img/payment/payment-1.png" alt=""></a>
-                        <a href="#"><img src="public/img/payment/payment-2.png" alt=""></a>
-                        <a href="#"><img src="public/img/payment/payment-3.png" alt=""></a>
-                        <a href="#"><img src="public/img/payment/payment-4.png" alt=""></a>
-                        <a href="#"><img src="public/img/payment/payment-5.png" alt=""></a>
+<!-- Conntent end -->
+
+
+            <!-- Footer Start -->
+            <div class="container-fluid pt-4 px-4">
+                <div class="bg-light rounded-top p-4">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 text-center text-sm-start">
+                            &copy; <a href="#">Đồ án 1 </a>, Trang admin. 
+                        </div>
+                        <div class="col-12 col-sm-6 text-center text-sm-end">
+                            
+                            Develop by <a href="#1">Mạnh</a>
+                        </br>
+                        <a class="border-bottom" href="#1" target="_blank"></a>
+                        </div>
                     </div>
                 </div>
             </div>
+            <!-- Footer End -->
         </div>
-        
-        <div class="row">
-            <div class="col-lg-12">
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                <div class="footer__copyright__text">
-                    <p>Đồ án &copy; <script>document.write(new Date().getFullYear());</script> </p>
-                </div>
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            </div>
-        </div>
-    </div>
-</footer>
-<!-- Footer Section End -->
+        <!-- Content End -->
 
-<!-- Search Begin -->
-<div class="search-model">
-    <div class="h-100 d-flex align-items-center justify-content-center">
-        <div class="search-close-switch">+</div>
-        <form action="tim-kiem" method="get" class="search-model-form">
-            <input type="search" name="query" id="search-input" placeholder="TÌM KIẾM.....">
-        </form>
-    </div>
-</div>
-<!-- Search End -->
 
-<!-- Toatr -->
-<script>
-    $(document).ready(function () {
-        $("#toastr-success-top-right").on("click", function () {
-            toastr.success("1 sản phẩm đã thêm vào giỏ", "Thành công", {
-                closeButton: true,
-                debug: false,
-                newestOnTop: false,
-                progressBar: true,
-                positionClass: "toast-top-right",
-                preventDuplicates: false,
-                onclick: null,
-                showDuration: "300",
-                hideDuration: "1000",
-                timeOut: "5000",
-                extendedTimeOut: "1000",
-                showEasing: "swing",
-                hideEasing: "linear",
-                showMethod: "fadeIn",
-                hideMethod: "fadeOut"
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="public_admin/lib/chart/chart.min.js"></script>
+    <script src="public_admin/lib/easing/easing.min.js"></script>
+    <script src="public_admin/lib/waypoints/waypoints.min.js"></script>
+    <script src="public_admin/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="public_admin/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="public_admin/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="public_admin/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="//cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+
+    <!--  CKEditor CDN -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/40.1.0/classic/ckeditor.js"></script>
+
+    <script>
+
+        if(document.getElementById('categories-list')) {
+            const dataTableSearch = new DataTable("#categories-list", {
+                responsive: true,
+                searchable: true,
+                fixedHeight: false,
+                lengthMenu: [5, 10, 15, 20, 25],
+                pageLength: 5
             });
-        });
-    });
-</script>
+        }
 
-<!-- Js Plugins -->
-<script src="public/js/jquery-3.3.1.min.js"></script>
-<script src="public/js/bootstrap.min.js"></script>
-<script src="public/js/jquery.magnific-popup.min.js"></script>
-<script src="public/js/jquery-ui.min.js"></script>
-<script src="public/js/mixitup.min.js"></script>
-<script src="public/js/jquery.countdown.min.js"></script>
-<script src="public/js/jquery.slicknav.js"></script>
-<script src="public/js/owl.carousel.min.js"></script>
-<script src="public/js/jquery.nicescroll.min.js"></script>
-<script src="public/js/main.js"></script>
+        if(document.getElementById('orders-list')) {
+            const dataTableSearch = new DataTable("#orders-list", {
+                responsive: true,
+                searchable: true,
+                fixedHeight: false,
+                lengthMenu: [5, 10, 15, 20, 25],
+                pageLength: 5
+            });
+        }
 
-<!-- dialogflow -->
-<!-- <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-<df-messenger
-    intent="WELCOME"
-    chat-title="Chat"
-    agent-id="a111a74a-8334-4098-9636-0f1433d6fc97"
-    language-code="vi"
-></df-messenger> -->
+        if(document.getElementById('comments-list')) {
+            const dataTableSearch = new DataTable("#comments-list", {
+                responsive: true,
+                searchable: true,
+                fixedHeight: false,
+                lengthMenu: [5, 10, 15, 20, 25],
+                pageLength: 5
+            });
+        }
 
+        if(document.getElementById('post-list')) {
+            const dataTableSearch = new DataTable("#post-list", {
+                responsive: true,
+                searchable: true,
+                fixedHeight: false,
+                lengthMenu: [5, 10, 15, 20, 25],
+                pageLength: 5
+            });
+        }
 
+        if(document.getElementById('users-list')) {
+            const dataTableSearch = new DataTable("#users-list", {
+                responsive: true,
+                searchable: true,
+                fixedHeight: false,
+                lengthMenu: [5, 10, 15, 20, 25],
+                pageLength: 5
+            });
+        }
+
+        ClassicEditor
+            .create(document.querySelector('#short_description'))
+            .then(editor => {
+                console.log(editor);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+
+        // Tạo trình soạn thảo cho #product_details
+        ClassicEditor
+            .create(document.querySelector('#product_details'))
+            .then(editor => {
+                console.log(editor);
+            })
+            .catch(error => {
+                console.error(error);
+            });    
+    </script>
+
+    <script>
+        function confirmDeletion() {
+        return confirm("Bạn có chắc muốn xóa? Sau khi xóa sẽ không thể khôi phục!   ");
+    
+        }
+
+        function confirmDeletionTemp() {
+        return confirm("Bạn có chắc muốn đưa sản phẩm vào thùng rác?");
+    
+        }
+    </script>
+
+    <!-- Template Javascript -->
+    <script src="public_admin/js/main.js"></script>
 </body>
 
 </html>
